@@ -10,3 +10,5 @@ const typeof3 = true;
 const typeof4 = {ninja: 'turtle'};
 
 
+for (let line = "#"; line.length < 8; line += "#")
+  console.log(line);

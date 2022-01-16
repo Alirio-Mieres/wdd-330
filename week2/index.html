@@ -11,21 +11,22 @@
 </head>
 
 <body>
-  <h1>WDD 330 Portfolio</h1>
-  <h2>Week 2 Notes</h2>
-  <h3>Week 2 Exercises</h3>
-  <a href="practiceweek2.html"></a>
+  <main>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week 2 Notes</h2>
+    <h3>Week 2 Exercises</h3>
+    <a href="practiceweek2.html">Excercises</a>
 
-  <h3>Programming Basics</h3>
-  <section>
-    <h4> In JavaScript there are two types of comment:</h4>
-    <ul>
-      <li>Single line comments starting with "//" and finishing at the end of the line</li>
-      <li>Multi-line comments starting with /* and finishing with */</li>
-      <li>A block is a series of statements that are collected together inside curly braces. Blocks do not need to be
-        terminated by a semicolon.</li>
-    </ul>
-  </section>
+    <h3>Programming Basics</h3>
+    <section>
+      <h4> In JavaScript there are two types of comment:</h4>
+      <ul>
+        <li>Single line comments starting with "//" and finishing at the end of the line</li>
+        <li>Multi-line comments starting with /* and finishing with */</li>
+        <li>A block is a series of statements that are collected together inside curly braces. Blocks do not need to be
+          terminated by a semicolon.</li>
+      </ul>
+    </section>
 
     <section>
       <h4>JavaScript has seven different data types. Six of them are primitive data types and are listed below:</h4>
@@ -36,13 +37,15 @@
         <li>Boolean</li>
         <li>Undefined</li>
         <li>Null</li>
-        <p>Any value that isn’t one of the primitive data types listed above is an object. These include arrays, functions and object literals, which will be discussed in later chapters.</p>
+        <p>Any value that isn’t one of the primitive data types listed above is an object. These include arrays,
+          functions
+          and object literals, which will be discussed in later chapters.</p>
       </ul>
     </section>
 
     <section>
-    <h4>JavaScript has a special operator called typeof for finding out the type of a value.
-      Here are some examples of the different value types: </h4>
+      <h4>JavaScript has a special operator called typeof for finding out the type of a value.
+        Here are some examples of the different value types: </h4>
       <ul>
         <li><a href="#"><span onclick="practiceTypeof(typeof1)">typeof "Hello World"</span></a></li>
         <li><a href="#"><span onclick="practiceTypeof(typeof2)">typeof 10</span></a></li>
@@ -51,8 +54,49 @@
       </ul>
     </section>
 
-    <section></section>
+    <section>
+      <h4>Variables</h4>
+      <p>Variables are used in programming languages to refer to a value stored in memory.</p>
+      <p>JavaScript uses the keywords <strong>const</strong> and <strong>let</strong> to declare variables. The keyword
+        <strong></strong>const is used when the variable will
+        not be reassigned to another value, whereas <strong>let</strong> is used if the variable might be reassigned
+        later in the program.
+      </p>
+      <p>To assign a value to a constant or variable, we use the = operator. For example:</p>
+      <p>const name = "Alirio"</p>
 
+      <h4>Scope</h4>
+      <p>Using <strong>const</strong> and <strong>let</strong> to declare variables means they are block scoped, so
+        their value only exists inside the block they are declared in.</p>
+
+      <h5>Local Scope</h5>
+      <p>In ES6, blocks can be used to create a local scope. This means that any variables defined inside a block using
+        the let or const will only be available inside that block and not be accessible outside of that block. This is
+        known as having local scope, as the variable is only visible in the locality of the block.</p>
+
+      <h5>Global Scope</h5>
+      <p>Any variable declared outside of a block is said to have global scope. This means it is accessible everywhere
+        in the program. While this may seem to be a good idea at first, it is not considered good practice.</p>
+    </section>
+
+    <section>
+      <h4>Converting Between Strings and Numbers</h4>
+      <p>We can convert numbers to strings and vice versa using a variety of methods.</p>
+
+      <h5>Converting Strings to Numbers</h5>
+      <p>The best way to convert a string to a number is to use the "Number" method, since it is less error-prone, a
+        good practice is to avoid coercion of different values.</p>
+      <p>Example: </p>
+      <p>Number("10")<br>
+        result: 10</p>
+      <p>Note: If the string cannot be converted into a number, then NaN is returned.</p>
+
+      <h5>Numbers Strings to Strings</h5>
+      <p>The preferred way of changing a number to a string is to use the String function</p>
+
+    </section>
+
+  </main>
 </body>
 
 </html>
