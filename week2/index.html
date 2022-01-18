@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/practice2.js"></script>
+  <script defer src="js/readings2.js"></script>
   <title>Week 2 notes</title>
 </head>
 
@@ -88,15 +88,151 @@
         good practice is to avoid coercion of different values.</p>
       <p>Example: </p>
       <p>Number("10")<br>
-        result: 10</p>
+        Result: 10</p>
       <p>Note: If the string cannot be converted into a number, then NaN is returned.</p>
 
       <h5>Converting Numbers to Strings</h5>
       <p>The preferred way of changing a number to a string is to use the String function</p>
+       <p>String(3);</p>
+       <p>Result: 3</p>
 
+       <h4>Parsing Numbers</h4>
+       <p>There is also a useful function called parseInt() that can be used to convert a string representation of a numerical value back into a number.</p>
     </section>
 
-  </main>
-</body>
+    <h3>Array, Logic, and Loops</h3>
+
+    <h4>Arrays</h4>
+    <p>An array is an ordered list of values. To create an array literal, simply write a pair of square brackets</p>
+    <p>For example: const myArray = [];</p>
+    <p>This would create an empty array.</p>
+    <br>
+    <p>To access a specific value in an array, we write its position in the array in square brackets (this is known as its index).</p>
+    <p>For example: heroes[0]</p>
+    <p>If an element in an array is empty, undefined is returned</p>
+    <p>To add a value to an array, write the name of the array, then write the index of the array in parentheses (the index starts with zero), then write the "=" sign and add the value you want, you can be a number, string, boolean, or even another array.</p>
+    <p>For example: student[0] = "Alirio Mieres";</p>
+
+    <h4>Removing Values from Arrays</h4>
+    <p>The delete operator will remove an item from an array:</p>
+    <p>Example: delete student[0];</p>
+
+    <h4>Array Properties and Methods</h4>
+    <p>Arrays have properties and methods that are useful for solving problems.</p>
+    <p><strong>length:</strong> It is a property that allows knowing how many values an array has.</p>
+    <p>For example:</p>
+    <p>const student = ["Alirio", "Pedro", "Daniel" "Jacob"];</p>
+    <p>student.legnth;</p>
+    <p>Result: 4</p>
+
+    <p>The length property can be used as part of the index to find the last item in an array</p>
+    <p>student[student.length -1];</p>
+    <p>Note:You can see the result in the console.</p>
+
+    <h4>Method</h4>
+    <p>pop() => Remove the last item from the array</p>
+    <p>shift() => Remove the first element of the array</p>
+    <p>push() => Add a new value to the end of the array</p>
+    <p>unshift() => Add a new value to the array but placing it as the first</p>
+
+    <h4>Merging Arrays</h4>
+    <p>The concat() method can be used to merge an array with one or more arrays.</p>
+    <p>student.concat(["Jose", "Carlos", "Juan"]);</p>
+    <p>This would create another array adding the new values to it. To update the previous array must be assigned.</p>
+    <p>student = student.concat(["Jose", "Carlos", "Juan"]);</p>
+    <p>View the console to see the results</p>
+
+    <h4>Join method</h4>
+    <p>The join() method can be used to turn the array into a string that comprises all the items in the array, separated by commas:</p>
+    <p>let joinExample = student.join();</p>
+    <p>console.log(joinExample);</p>
+    <p>View the console to see the example</p>
+    <h4>Slice method</h4>
+    <p>The slice() method creates a subarray; effectively chopping out a slice of an original array, starting at one position and finishing at another. For example, if we wanted to find the 3rd and 4th item in our array we would use the following code:</p>
+    <p>let sliceExample = student.slice(2, 4);</p>
+    <p>console.log(sliceExample);</p>
+    <p>Note that this operation is non-destructive ― no items are actually removed from the array, as we can see if we take a look at the avengers array:</p>
+    <h4>Splice method</h4>
+    <p>The splice() method removes items from an array then inserts new items in their place. For example:</p>
+    <p>let spliceExample = student.splice(3, 1, "Jason");</p>  
+    <p>console.log(spliceExample);</p>
+    <p>The splice() method is a particularly flexible method as it can be used to insert or remove values from an array. Be careful, though, as splice() is a destructive method which means it changes the array permanently.</p>
+
+    <h4>Other methods:</h4>
+    <p>We can reverse the order of an array using the reverse() method</p>
+    <p>We can sort the order of an array using the sort() method</p>
+    <p>We can find out if an array contains a particular value using the indexOf() method to find the first occurrence of a value in an array.</p>
+    <p>ES6 also introduced the includes() method. This returns a boolean value depending on whether the array contains a particular element or not</p>
+    <p>You can also add an extra parameter to indicate which index to start the search from:</p>
+    <p>student.includes('Jason', 1);</p>
+
+    <h4>Multidimensional Arrays</h4>
+    <p>To access the values in a multidimensional array, we use two indices: one to refer to the item’s place in the outer array, and one to refer to its place in the inner array</p>
+
+    <h4>Sets</h4>
+    <p>A set is a data structure that represents a collection of unique values, so it cannot include any duplicate values.</p>
+    <p>Sets offer a useful way to keep track of data without having to check if any values have been duplicated. It's also quick and easy to check if a particular value is in a set, which can be a slow operation if an array is used.</p>
+    <p>An empty set is created using the new operator and Set() constructor</p>
+    <p>const list = new Set();</p><br>
+    <p>Values can be placed into a set using the add method:</p>
+    <p>list.add(1);<br>
+      Result: Set { 1 }</p>
+      <p>If you try to add a value that is already contained in the set, then the operation is simply ignored</p>
+      <p>Multiple values can be added to a set in one go by placing them inside an array that is provided as an argument</p>
+      <p>To see the contents of a set, simply enter the name of the variable that refers to it</p>
+      <p>numbers <br> 
+      Set { 1, 2, 3 }</p>
+
+      <h4>Converting Sets to Arrays</h4>
+      <p>A set can be converted into an array by placing the set, along with the spread operator directly inside an array literal.</p>
+      <p>
+        const setExample = new Set().add('Mormon').add('Nephi').add('Lehi');<br>
+        const setExample2 = Array([...setExample]);<br>
+        console.log(setExample2);</p>
+        <p>View in the console</p>
+        <p>It's also possible to use the Array.from() method to convert a set into an array.</p>
+      
+        <h4>Maps</h4>
+        <p>They are a convenient way of keeping a list of key and value pairs, and are similar to 'hashes', or 'hash tables' or 'dictionaries' in other programming languages.</p>
+        <p>An empty map object can be created using the new operator and Map() constructor:</p>
+        <p>const romanNumerals = new Map();</p>
+        <p>A map is like a dictionary by which you can find a value based on a key.</p>
+        <p>we can use the <strong>get()</strong> method to retrieve any values.</p>
+        <p>The <strong>has()</strong> method can be used to check if a particular key is in a map. This returns a boolean value of true or false</p>
+        <p>The number of key and value pairs in a map can be found by querying the <strong>size</strong> property</p>
+        <p>The delete() method can be used to remove a key and value pair from a map. This returns a boolean value of true if the value was removed or false if it wasn't in the map.</p>
+        
+        <h4>Logic</h4>
+        <p>An if statement looks like this:</p>
+        <p>if (condition){<br>
+          }</p>
+          <p>The condition is what would go inside the parentheses. The code inside the block is what would be executed if the condition is true.</p>
+          <p>The else keyword can be used to add an alternative block of code to run if the condition is false.</p>
+          <p>A shorthand way of writing an if ... else statement is to use the ternary operator, "?"</p>
+          <p>The switch operator can be used to make your code easier to follow when there are lots of conditions to test.</p>
+          <p>View the console</p>
+
+          <h4>Loops</h4>
+          <p>We’ll start by looking at a while loop. This will repeatedly run a block of code while a certain condition is true.<p>
+          <p>It is important that the condition in a while loop will be met at some point, otherwise your code will get stuck in an infinite loop that could possibly crash the program.</p>
+          <h5>do ... while Loops</h5>
+          <p>A do ... while loop is similar to a while loop. The only difference is that the condition comes after the block of code</p>
+          <h5>For Loops</h5>
+          <p>For loops are probably the most commonly type of loop used in JavaScript, and take the following form:</p>
+          <p>for (initialization ; condition ; after) { do something }</p>
+          <p>A for loop can be used to iterate over each value in an array.</p>
+          <p>View the console.</p>
+          <p>A for-of loop can be used to iterate over an array. <br>
+            Sets and maps are enumerable, so can also be looped over using a for-of loop.</p>
+          
+          <h3>Functions</h3>
+          <p>Functions are first-class objects that behave the same way as other values. <br>
+            Function literals can be defined using the function declaration, or by creating a "function" expression by assigning an anonymous function to a variable.<br>
+            All functions return a value. If this is not explicitly stated, the function will return undefined. <br>
+            <p>Parameters and arguments are terms that are often used interchangeably to represent values provided for the function as an input. There is a subtle difference though: any parameters a function needs are set when the function is defined. When a function is invoked, it is provided with arguments.</p>
+          </p>
+          
+        </main>
+        </body>
 
 </html>
