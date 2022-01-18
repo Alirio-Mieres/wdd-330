@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pratice week 2</title>
+  <link rel="stylesheet" href="css/style.css">
   <script defer src="js/practice2.js"></script>
 </head>
+
 <body>
+  <h1>Excercises Week 2</h1>
+  <h2>Team Activity</h2>
   <input type="text" id="myNumber">
   <button id="sum">Get sum</button>
-
 
 
   <input type="text" id="mySecondnum">
   <button id="add">Add</button>
   <div id="displayTotal"></div>
-
   <button id="multiply">Multiply</button>
+
+  <h3>Personal Exercises</h3>
+
+  <!--Requirement 1-->
+  <input type="text" id="value1">
+  <button id="value1" onclick="reqOne()">Submit</button>
+  <div id="output1"></div>
+
+  <!--Requirement 2-->
+    <div>
+    <input type="text" id="value2">
+    <button id="value2" onclick="reqTwo()">Submit</button>
+    <div id="output2"></div>
+  </div>
+  <!--Requirement 3-->
+  <div>
+    <input id="req3Number1" placeholder="enter a number" type="number" /><input
+      id="req3Number2"
+      placeholder="enter a number"
+      type="number"
+    />
+    <button id="req3Button" onclick="add()">+</button>
+    <div id="req3Output"></div>
+  </div>
+  <h3>See the console to see more exercises.</h3>
 </body>
+
 </html>
