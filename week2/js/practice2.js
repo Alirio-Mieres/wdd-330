@@ -1,14 +1,46 @@
-//Practice 1 Typeof
-const practiceTypeof = (type) =>{
-  const data = typeof type
-  alert(data)
+function displayNum() {
+  let myNumbers = getInput();
+  display(computeSum(myNumbers[0]));
 }
 
-const typeof1 = 'Hello World';
-const typeof2 = 10;
-const typeof3 = true;
-const typeof4 = {ninja: 'turtle'};
+function computeSum(num) {
+  let mySum = 0;
+  if (num > 0) {
+    let i = 0;
+    while (i <= num) {
+      mySum = mySum + i;
+      i++;
+    }
+  }
+  return mySum;
+}
 
+const sayHello = ()=>{
+  console.log('Hello');
+}
 
-for (let line = "#"; line.length < 8; line += "#")
-  console.log(line);
+const getInput = function () {
+  const input = parseInt(document.getElementById("myNumber").value);
+  const input2 = parseInt(document.getElementById("mySecondnum").value);
+
+  const myInput = [input, input2];
+  return myInput;
+}
+
+function addNumber() {
+  let myNumbers = getInput();
+  display(myNumbers[0] + myNumbers[1]);
+}
+
+function display(result) {
+  document.getElementById("displayTotal").innerHTML = result;
+}
+
+document.getElementById("sum").addEventListener("click", displayNum);
+document.getElementById("add").addEventListener("click", addNumber);
+document.getElementById("multiply").addEventListener("click", () => {
+  let myNumbers = getInput();
+  display(myNumbers[0] * myNumbers[1]);
+});
+
+sayHello();
