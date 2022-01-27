@@ -1,51 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 3 notes</title>
+  <link rel="stylesheet" href="css/style.css">
   <script defer src="js/practiceweek3.js"></script>
 </head>
+
 <body>
-  <h1>WDD 330 Portfolio</h1>
-  <h2>Week 3 Notes</h2>
+  <main>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week 3 Notes</h2>
+    <a href="team3.html">Team Activity 3</a>
+    <section>
 
-  <h3>Object methods, "this"</h3>
-  <ul>
-    <li>The value of this is defined at run-time.</li>
-    <li>When a function is declared, it may use this, but that this has no value until the function is called.</li>
-    <li>A function can be copied between objects.</li>
-    <li>When a function is called in the “method” syntax: object.method(), the value of this during the call is object.</li>
-  </ul>
 
-  <h3>Objects</h3>
-  <ul>
-  <li>Objects are a collection of key-value pairs placed inside curly braces {}.</li>
-  <li>Objects have properties that can be any JavaScript value. If it’s a function, it’s known as a method.</li>
-  <li>Objects are mutable, which means their properties and methods can be changed or removed.</li>
-  <li>JSON is a portable data format that uses JavaScript object literals to exchange information.</li>
-  <li>Objects can be used as parameters to functions, which allows arguments to be entered in any order, or omitted.</li>
-  </ul>
+      <h3>Objects</h3>
+      <p>This week I learned about objects, when we talk about objects in programming we mean entities that can be
+        represented in real life, like a car or a motorcycle. These objects have certain properties that characterize
+        them, for example, the car has wheels, an engine, doors, etc. They also have functionalities like forward or
+        slow down, this is known as a method. In short, objects have properties (the values that characterize them) and
+        methods (functions that belong to that object).</p>
+      <p>In JavaScript, objects are collections that have keys and values. As I said before they can contain any
+        JavaScript value, the methods are functions of the object. They can also change their values or even delete
+        them. </p>
+      <p>JavaScript has built-in objects that have useful methods that help solve various problems. "JSON" stands for
+        JavaScript Object Notation, it is a lightweight format used to exchange information. There is also the "Math"
+        object which contains mathematical constants like PI and also has methods to solve mathematical problems. The
+        "Date" object is used to get the current date and can be manipulated to display the date in different ways.</p>
 
-  <h3>The Document Object Model</h3>
-    <ul>
-      <li>The Document Object Model is a way of representing a page of HTML as a tree of nodes.</li>
-      <li>The document.getElementById(), document.getElementsByClassName(), document.getElementsByTagNames() and document.querySelector() can be used to access elements on a page.</li>
-      <li>The parentNode(), previousSibling(), nextSibling(), childNodes() and children() methods can be used to navigate around the DOM tree.</li>
-      <li>An element’s attributes can be accessed using the getAttribute() method, and updated using the setAttribute() method.</li>
-      <li>The innerHTML property can be used to insert raw HTML directly into the DOM.</li>
-      <li>The CSS properties of an element can be changed by accessing the "style" property.</li>
-    </ul>
-  <h3>Events</h3>
-  <ul>
-    <li>Events occur when a user interacts with a web page.</li>
-    <li>An event listener is attached to an element, then invokes a callback function when the event occurs.</li>
-    <li>The event object is passed to the callback function as an argument, and contains lots of properties and methods relating to the event.</li>
-    <li>You can remove an event using the removeEventListener method.</li>
-    <li>There are many types of event, including mouse events, keyboard events, and touch events.</li>
-    <li>You can remove an event using the "removeEventListener" method.</li>
-    <li>Event propagation is the order the events fire on each element.</li>
-  </ul>
+      <h3>Object methods, "this"</h3>
+      <p>"this" is a JavaScript keyword that behaves differently depending on the context in which it is used. For
+        example, when "this" is used inside a method, it refers to the object that contains the method on which it is
+        invoked. When a function is declared, we can use "this", but it has no value until the function is called.</p>
+
+      <h3>The Document Object Model</h3>
+      <p>DOM stands for The Document Object Model, according to the book JAVASCRIPT: NOVICE TO NINJA "represents an HTML
+        document as a network of connected nodes that form a tree-like structure." This is not part of JavaScript but
+        has been widely used with this language. In short, the DOM is used to modify a web page in different ways, you
+        can get, delete, modify, add and even change the order of the elements of a web page.</p>
+      <p>The most used to access elements of a page are document.getElementById() (this is used only to access a
+        specific element with an id) and document.querySelector() (which can have id or class, we must place the "# " or
+        "." sign depending on the situation).</p>
+      <p>An element's attributes can be accessed with getAttribute() and can be updated or modified with setAttribute().
+        A new element can be created using createElement() and createTextNode(), these can be added with appendChild()
+        and insertBefore(). They can also be replaced using replaceChild(). innerHTML se usa para insertar código HTML
+        sin ser procesado por el DOM.</p>
+
+      <h3>Events</h3>
+      <ul>
+        <li>Events occur when a user interacts with a web page.</li>
+        <li>An event listener is attached to an element, then invokes a callback function when the event occurs.</li>
+        <li>The event object is passed to the callback function as an argument, and contains lots of properties and
+          methods relating to the event.</li>
+        <li>You can remove an event using the removeEventListener method.</li>
+        <li>There are many types of event, including mouse events, keyboard events, and touch events.</li>
+        <li>You can remove an event using the "removeEventListener" method.</li>
+        <li>Event propagation is the order the events fire on each element.</li>
+      </ul>
+    </section>
+  </main>
 </body>
+
 </html>
+
+<!--<h2>Notes</h2>
+<h4> Object Methods: this</h4>
+<p>An object method needs to access the information stored in the object to do its job. To access the object, a method can use the "this" keyword</p>
+<p>The value of this is the object “before dot”, the one used to call the method.</p>
+<p>In JavaScript, keyword this behaves unlike most other programming languages. It can be used in any function, even if it’s not a method of an object.</p>
+
+ <h4>Objects</h4>
+  <p>To create an object literal  I must enter a pair of curly braces </p>
+  <p>I can access the properties of an Object using the dot notation or using bracket notation</p>
+  <p>Properties and Methods can changed or removed and can be  used as parameters to functions</p>
+  <p>JSON is a portable data format to exchange information</p>
+
+ <h4> Document Object Model</h4>
+ <p>DOM is a way of representing a page of a pages HTML as a tree of nodes</p>
+ <img src="tree.gif" alt="tree of nodes">
+
+
+ <h4> Events</h4>
+ <p>HTML events are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can "react" on these events.</p> -->
