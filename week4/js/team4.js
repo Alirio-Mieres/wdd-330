@@ -16,12 +16,9 @@ function addPiece(piece) {
 
     if (player == player1) {
         player = player2;
-
     } else {
         player = player1;
-
     }
-
     piece.target.innerHTML = player;
 }
 
@@ -41,9 +38,6 @@ function reset() {
 
 function tie() {
 
-    /* If the "X" appears 5 times it means that the table is full and nothing wins. */
-    /* sometimes the letter "x" could appear 5 times and have a winner at the last moment. */
-    /* In this case, there is another condition to declare a tie | The function "winner" needs to return the word "win" if this declaration is true the tie is not possible. */
     const checkWinner = winner();
 
     /* check how many times the "x" was put on */
@@ -69,9 +63,6 @@ function winner() {
         /*board[i].innerHTML = "";*/
         value[i] = board[i].innerText;
     }
-
-    /* In this game, there are specific combinations to win, (8 combinations) */
-    /* Each box has a position in an array and if you know where are the letters "x" or "o" in this array you can determine if the player wins or not. */
 
 
     if (value[0] === "x" && value[1] === "x" && value[2] === "x") {
@@ -99,8 +90,6 @@ function winner() {
         show[0].innerHTML = "PLAYER 1 WINS !!!";
         return "win";
     }
-
-    /* the same case for the letter "o" */
 
     if (value[0] === "o" && value[1] === "o" && value[2] === "o") {
         show[0].innerHTML = "PLAYER 2 WINS !!!";
@@ -132,7 +121,17 @@ function winner() {
 }
 
 
-
+/*const gameBoard = document.querySelector('.container');
+const p1 = 'X';
+const p2 = 'O';
+let player = p1;
+function placeMark(event) {
+    console.log(event.target);
+    event.target.innerHTML = player;
+    if (player === p1) player = p2;
+    else player = p1;
+    event.target.innerHTML = player;
+}
 gameBoard.addEventListener('click', placeMark)
 document.querySelector('.container').addEventListener("click", placeMark);
 function reset() {
@@ -140,4 +139,4 @@ function reset() {
     for (i = 0; i < board.length; i++) {
         board[i].innerHTML = "";
     }
-}
+}*/
