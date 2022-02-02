@@ -7,7 +7,6 @@ let player = player2;
 
 let value = [];
 
-/* This event listener is ready to detect a click in the container div  */
 document.querySelector('.container').addEventListener("click", addPiece);
 document.querySelector('.container').addEventListener("click", winner);
 document.querySelector('.container').addEventListener("click", tie);
@@ -23,44 +22,35 @@ function addPiece(piece) {
 }
 
 function reset() {
-    /* go over all clases called .box one by one */
     const board = document.getElementsByClassName("box");
     let i;
     for (i = 0; i < board.length; i++) {
-        /* Replace everything */
         board[i].innerHTML = "";
     }
-    /* Reset the text at the beginning */
-    show[0].innerHTML = "Player 1, starts the game";
-    /* Reset the initial value */
-    player = player2;
+
 }
 
 function tie() {
 
     const checkWinner = winner();
 
-    /* check how many times the "x" was put on */
     let count = 0;
     for (let i = 0; i < value.length; i++) {
         if (value[i] === "x") {
             count++;
         }
     }
-    /* If the "X" appears 5 times it means that the table is full and nothing wins. */
+
     if (count == 5 && checkWinner !== "win") {
-        show[0].innerHTML = "TIE :(";
+        show[0].innerHTML = "TIE";
     }
 }
 
 function winner() {
 
-    /* Checks all elements with the "box" class */
     const board = document.getElementsByClassName("box");
     let i;
     for (i = 0; i < board.length; i++) {
-        /* Replace everything */
-        /*board[i].innerHTML = "";*/
         value[i] = board[i].innerText;
     }
 
@@ -116,8 +106,6 @@ function winner() {
         show[0].innerHTML = "PLAYER 2 WINS !!!";
         return "win";
     }
-    //console.log(value);
-    //console.log(value[0]);
 }
 
 
