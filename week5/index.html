@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 5 notes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week 5 Notes</h2>
+    <a href="team5.html">Team Activity 5</a>
+
+    <section>
+      <h3>Testing and Debugging</h3>
+      <p>This week I learned about the possible errors that can occur when making a program. I learned that errors,
+        exceptions, and warnings can occur. Errors occur when something goes wrong in the program and can be caused by
+        systems (systems or devices that interact with the program), programmers (the program contains incorrect syntax
+        or a typo), users (they may enter an invalid value or incorrect data). Programmer errors are our responsibility,
+        so it is important to use tools that prevent errors and use good practices. User errors are also programmer
+        errors because the system must be designed in such a way that the user knows what data to enter. Exceptions are
+        errors that produce a return value that can then be used by the program to handle the error. A
+        warning is a notice of an error in the code, but it is not big enough to crash the program.</p>
+      <p>
+        This week I also learned about strict mode, which produces more exceptions and warnings. Using
+        strict code helps improve clarity and speed, because it forces the developer to implement best practices. To use
+        strict mode, just place: 'use strict' in the first line of the JavaScript code. Strict mode can also be used
+        inside a function, so it would only affect that function and not the whole file.
+      </p>
+      <p>
+        Linting tools can be used to test the quality of JavaScript code. They are used to highlight any bad programming
+        practices. They are used to adhering to a style guide and are good for teamwork as everyone will follow the same
+        conventions.
+      </p>
+      <p>
+        Another important thing is feature detection. JavaScript programming is constantly changing, so some newer
+        methods may not be available in older browsers. So to check for browser compatibility, feature detection is
+        used, which is done by means of an "if" statement that checks if the object or method being called exists.
+      </p>
+      <p>
+        There are several methods to debug our code, among them is the alert() method that shows on the screen when an
+        error occurs in our code (it is not something that is recommended to do), there is also the use of the console
+        through the console.log(), which is used to record any errors that have occurred. Modern browsers have
+        debugging tools, using breakpoints in our code will pause the program and we will be able to see the values of
+        our variables at that point and modify them.
+      </p>
+      <p>
+        Exceptions can be thrown via the "throw" statement, which can be placed in any JavaScript expression and will
+        stop the code when an error is encountered. Exceptions can be handled by the "try", "catch" and "finally"
+        statements. When an error object is created, an exception is thrown. Any code inside a "try" will pass any error
+        objects to a "catch" block when an exception occurs. "finally" will run after "try" and "catch" whether or not
+        an exception is thrown.
+      </p>
+      <p>
+        Another thing I learned was about test-driven development. It consists of writing tests before any real code,
+        then writing the code to pass the tests, then refactoring the code to make it more optimal, then testing the
+        refactored code, and finally writing more tests for new features. "Jest" is a framework that makes it easy to
+        create and run tests.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
