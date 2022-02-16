@@ -11,8 +11,6 @@ const deleteTask = document.createElement('button');
 const text = document.createElement('label');
 const checkTask = document.createElement('input');
 
-
-
 checkTask.setAttribute('type', 'checkbox');
 
 
@@ -24,6 +22,7 @@ checkTask.classList.add('check');
 deleteTask.classList.add('delete');
 
 
+
 newTask.appendChild(checkTask);
 newTask.appendChild(text);
 newTask.appendChild(deleteTask);
@@ -31,4 +30,8 @@ newTask.appendChild(deleteTask);
 container.appendChild(newTask);
 
 document.querySelector('#data').value = "";
+
+deleteTask.onclick = function(e) {
+  container.removeChild(newTask);
+}
 }

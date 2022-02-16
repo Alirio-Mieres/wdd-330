@@ -189,8 +189,8 @@ del borde*/
 input[type="checkbox"]{
   position: relative;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   -webkit-appearance: none;
   outline: none;
   transition: .5s;
@@ -213,4 +213,14 @@ input:checked[type="checkbox"]::before{
   width: 10px;
   border-color: #0f0;
   transform: rotate(45deg) translate(5px, -10px);
+}
+
+/*X*/
+
+.delete{
+  -webkit-appearance: none;
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
 }
