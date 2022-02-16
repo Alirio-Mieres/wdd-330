@@ -2,26 +2,31 @@ let table = document.querySelector("ol");
 
 const links = [
   {
-    label: "Week1 notes",
+    label: "Week 1 notes",
     url: "week1/index.html"
   },
 
 {
-  label: "Week2 notes",
+  label: "Week 2 notes",
   url: "week2/index.html"
 },
 {
-  label: "Week3 notes",
+  label: "Week 3 notes",
   url: "week3/index.html"
 },
 
 {
-  label: "Week4 notes",
+  label: "Week 4 notes",
   url: "week4/index.html"
 },
 {
-  label: "Week5 notes",
+  label: "Week 5 notes",
   url: "week5/index.html"
+},
+
+{
+  label: "Week 6",
+  url: "week6/index.html"
 }
 ];
 
