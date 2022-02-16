@@ -12,6 +12,7 @@ export default class Tasklist {
         })
         this.renderList();
     }
+    
     addTask(content) {
         let task = new Task(content = content);
         this.list.push(task);

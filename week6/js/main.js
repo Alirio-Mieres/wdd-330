@@ -15,7 +15,6 @@ class Todo {
         this.todoList.addTask(txtbox.value);
         txtbox.value = "";
     }
-    
     filterAll() {
         this.todoList.renderList()
     }

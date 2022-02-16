@@ -1,4 +1,3 @@
-/*Margin*/
 body{
   height: 100vh;
 }
@@ -54,10 +53,7 @@ li{
 .filters{
   width: 320px;
   display: flex;
-  justify-content: space-between;
-/*  align-items: stretch;
-  flex: auto;*/
-  
+  justify-content: space-between;  
 }
 /*Spaces task*/
 

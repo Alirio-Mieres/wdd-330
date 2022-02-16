@@ -1,5 +1,4 @@
 // Add
-
 export default class Task {
   constructor(content = "", id = Date.now(), completed = false){ 
   this.content = content;
