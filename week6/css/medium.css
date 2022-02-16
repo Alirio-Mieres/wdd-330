@@ -1,0 +1,24 @@
+@media only screen and (min-width: 35rem) {
+
+  .filters{
+    width: 450px; 
+  }
+  /*Seccion de botones y numero de tareas*/
+  .task-number{
+    margin-left: 10%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+   }
+   
+   .buttons{
+     margin-right: 10%;
+   }
+   
+   .footer-data{
+     background-color: white;
+     border: 1px solid #018786;
+     padding: 0.5rem;
+     border-radius: 10px;
+     font-size: 1.2rem;
+   }
+}

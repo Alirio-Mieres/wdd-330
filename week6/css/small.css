@@ -1,0 +1,216 @@
+/*body{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#todo{
+text-align: center;
+
+}
+
+.task{
+  padding: 2rem;
+  margin-bottom: 0.2rem;
+  border: 1px solid black;
+}
+.task > label{
+  margin: 0 15rem 0 1rem;
+  font-size: 1.5rem;
+}*/
+
+/*Margin*/
+body{
+  height: 100vh;
+  /*Prueba*/
+
+
+}
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  /*Prueba crear espacio entre los bordes externos*/
+
+ /* margin: 0 10rem;*/
+}
+
+#container >   h1{
+  text-align: center;
+}
+
+#container{
+  border: 1px solid black;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+
+  border-radius: 10px;
+  /*Prueba*/
+
+}
+/*Task List*/
+
+#cont-box{
+  text-align: center;
+  max-width: 100%;
+}
+
+/*Espacio de la lista*/
+.list{
+  height: 300px;
+  max-width: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+ul > li{
+  list-style: none;
+}
+
+.list-container{
+  display: flex;
+  /*Esta es la clave para que cada elemento este separado
+  y a los costados*/
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1rem;
+  /*Esta es la clave para que no toquen el borde */
+  margin-left: -5%;
+  margin-right: 2%;
+}
+
+/*Checbox diseño*/
+/*[type="checkbox"]{display: none;}*/
+
+/*label{
+  /*padding-left: 1.3em;
+  /*Alejando las letras del check*/
+  /*margin-left: -45%;
+  font-size: 1.5rem;
+ /*position: relative --- no se para que funciona*/ 
+/*}
+
+/*label:before{
+  content:'✓';
+  border: solid 1px black;
+  border-radius: 3px;
+  /*Dandole tamaño al check
+  width: 1em;
+  height: 1em;
+  /*Averiguar como solucionar problema -- 
+  sale afuera del contenedor
+  text-align: center;
+  margin-left: 10%;
+  position: absolute;
+  left: 0px;
+}*/
+
+/*Esta porqueria hace que los botones se vuelvan locos*/
+/*[type="checkbox"]:checked + label:before{
+  border-color: #00e676;
+  color: #00e676;
+  content: "/f00c";
+}*/
+
+/*-------------*/
+
+
+/*Filters Buttons*/
+.filters{
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+/*  align-items: stretch;
+  flex: auto;*/
+  
+}
+/*Separacion del numero de tareas y los botones
+del borde*/
+
+.task-number{
+ margin-left: 5%;
+ padding: 0.5rem;
+ font-size: 1rem;
+ display: inline;
+}
+
+.buttons{
+  margin-right: 3%;
+}
+
+.footer-data{
+  background-color: white;
+  border: 1px solid #018786;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+/*.footer-data{
+  /*background-color: white;
+
+  border: none;
+  margin: 0;
+  background-color: aqua;
+  border: 1px solid black;
+}*/
+
+
+
+/*Footer*/
+
+.new-add{
+  text-align: center;
+  padding: 1.5rem;
+
+}
+
+.new-add > input{
+  padding: 0.5rem;
+  width: 80%;
+  margin-left: -1rem;
+}
+
+
+
+/*Button*/
+.action{
+  background-color: #018786;
+  margin-left: 0.2rem;
+  /*El font size hizo que no fuera necesario usar padding*/
+  /*padding: 0.6rem 1rem;*/
+  border-radius: 3px;
+  border: 1px solid #018786;
+  /*Tamaño de boton*/
+  font-size: 1.5rem;
+}
+
+/*Check*/
+input[type="checkbox"]{
+  position: relative;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  -webkit-appearance: none;
+  outline: none;
+  transition: .5s;
+}
+
+input[type="checkbox"]:before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 4px solid #262626;
+}
+
+input:checked[type="checkbox"]::before{
+
+  border-left: none;
+  border-top: none;
+  width: 10px;
+  border-color: #0f0;
+  transform: rotate(45deg) translate(5px, -10px);
+}
