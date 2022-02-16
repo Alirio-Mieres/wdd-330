@@ -1,17 +1,17 @@
-import TaskList from "./taskList.js";
+import TaskList from "./todos.js";
 
 class Todo {
     constructor() {
         this.todoList = new TaskList();
-        document.getElementById('newtask').addEventListener("keyup", (event) => (event.key == 'Enter') ? this.addTask() : "")
-        document.getElementById('filter-all').addEventListener('click', this.filterAll.bind(this));
-        document.getElementById('filter-active').addEventListener('click', this.filterActive.bind(this));
-        document.getElementById('filter-completed').addEventListener('click', this.filterCompleted.bind(this));
-        document.getElementById('add-task').addEventListener('click', this.addTask.bind(this));
+        document.getElementById('data').addEventListener("keyup", (event) => (event.key == 'Enter') ? this.addTask() : "")
+        document.getElementById('all-button').addEventListener('click', this.filterAll.bind(this));
+        document.getElementById('active-button').addEventListener('click', this.filterActive.bind(this));
+        document.getElementById('completed-button').addEventListener('click', this.filterCompleted.bind(this));
+        document.querySelector('.action').addEventListener('click', this.addTask.bind(this));
     }
     
     addTask() {
-        let txtbox = document.getElementById('newtask');
+        let txtbox = document.getElementById('data');
         this.todoList.addTask(txtbox.value);
         txtbox.value = "";
     }

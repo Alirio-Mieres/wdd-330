@@ -9,28 +9,28 @@
   <link rel="stylesheet" href="css/small.css">
   <link rel="stylesheet" href="css/medium.css">
   <link rel="stylesheet" href="css/large.css">
-  <script defer src="js/todos.js"></script>
+  <script defer src="js/main.js" type="module"></script>
   <title>Todo application</title>
 </head>
 
 <body>
   <main>
-  <section id="container">
-    <h1>Todos</h1>
+    <section id="container">
+      <h1>Todos</h1>
 
-    <section id="cont-box">
-      <!-- <p class="preliminar"></p> -->
-      <ul class="list">
-        <li>+Create a new Task</li>
-      </ul>
-    </section>
+      <section id="cont-box">
+        <!-- <p class="preliminar"></p> -->
+        <ul class="list">
+          <li>+Create a new Task</li>
+        </ul>
+      </section>
 
 
 
-      
-      <!--Filtros y contador-->
+
+      <!--Filters and containers-->
       <div class="filters">
-        <div class="task-number" >0 Task</div>
+        <div class="task-number">0 Task</div>
 
         <div class="buttons">
           <button id="all-button" class="footer-data">All</button>
@@ -40,30 +40,15 @@
 
       </div>
 
-      <!--Input y buton de añadir-->
+      <!--Input-->
       <div class="new-add">
         <input id="data" type="text" placeholder="new task">
-        <button class="action" onclick="addTask()">+</button>
+        <button class="action">+</button>
       </div>
+
     </main>
-
-  </section>
-
-  <!-- <div id="todo">
-      <h1>Todos</h1>
-      <div class="task">
-        <input type="checkbox" name="mark" id="mark">
-        <label for="mark" >Tenemos que hacer tarea</label>
-        <button id="close">X</button>
-      </div>
-
-      <div class="footer-task">
-        <label id="total-task"></label>
-        <button id="all">All</button>
-        <button id="active">Active</button>
-        <button id="completed">Completed</button>
-      </div>
-    </div>-->
+    </section>
+ 
 
 
 

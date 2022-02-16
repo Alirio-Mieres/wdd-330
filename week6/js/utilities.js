@@ -1,62 +1,44 @@
-import StorageHelper from './ls.js';
-import Task from './task.js';
+// Add
 
-export default class TaskList {
-    constructor(name = 'todo') {
-        this.ls = new StorageHelper();
-        this.name = name;
-        let templist = JSON.parse(this.ls.load(this.name));
-        this.list = [];
-        templist?.forEach(x => {
-            this.list.push(new Task(x.content,x.id,x.completed));
-        })
-        this.renderList();
-    }
-    addTask(content) {
-        let task = new Task(content = content);
-        this.list.push(task);
-        document.getElementById('taskList').appendChild(task.createElement(this.save.bind(this), this.removeTask.bind(this)));
-        this.save();
-    }
-    removeTask(task) {
-        const index = this.list.indexOf(task);
-        if (index > -1) {
-            this.list.splice(index, 1);
-        }
-        this.renderList();
-        this.save();
-    }
-    save() {
-        this.ls.save(this.name, JSON.stringify(this.list));
-        this.updateNumRemaining();
-    }
-    numUncompleted() {
-        let count = 0;
-        this.list.forEach(x => count += x.completed ? 0 : 1);
-        return count;
-    }
-    renderList(filters = ""){
-        let container = document.getElementById("taskList");
-        container.textContent="";
-        if (this.list) {
-            this.list.forEach(x => {
-                switch (filters) {
-                    case "ACTIVE":
-                        if (!x.completed) container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
-                        break;
-                    case "COMPLETED":
-                        if (x.completed) container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
-                        break;
-                    default:
-                        container.appendChild(x.createElement(this.save.bind(this), this.removeTask.bind(this)));
-                        break;
-                }
-            });
-        }
-        this.updateNumRemaining();
-    }
-    updateNumRemaining() {
-        let numremaining = this.numUncompleted();
-        document.getElementById('remainingtasks').innerHTML = `<p>${numremaining} task${numremaining > 1 ? 's' : ""} remaining</p>`;
-    }
+export default class Task {
+  constructor(content = "", id = Date.now(), completed = false){ 
+  this.content = content;
+  this.id = id;
+  this.completed = completed;
 }
+
+//Toggle Task
+  toggleTask() {
+    this.completed = !this.completed;
+  }
+
+  createElement(updateCallback, removeItemCallback){
+    const newTask = document.createElement('li');
+    
+    const checkTask = document.createElement('input');
+    checkTask.setAttribute('type', 'checkbox');
+    checkTask.addEventListener('click', (event) => {
+      this.toggleTask();
+      updateCallback();
+    });
+
+    this.completed ? checkTask.setAttribute('checked', true) : "";
+
+    const text = document.createElement('label');
+    text.innerHTML = this.content;
+
+    const deleteTask = document.createElement('button');
+    deleteTask.innerHTML = '❌';
+    deleteTask.addEventListener('click', (event) => {removeItemCallback(this)});
+
+    checkTask.classList.add('check');
+    deleteTask.classList.add('delete');
+
+    newTask.appendChild(checkTask);
+    newTask.appendChild(text);
+    newTask.appendChild(deleteTask);
+    return newTask;
+
+      }
+   }
+

@@ -8,4 +8,5 @@ export default class StorageHelper {
   save(name, info) {
     this.storage.setItem(name, info);
   }
+  
 }
