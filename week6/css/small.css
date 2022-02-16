@@ -13,11 +13,11 @@ main{
 }
 
 #container{
-  border: 1px solid black;
+  border: 1.8px solid black;
   margin-top: 3vh;
   margin-bottom: 3vh;
   border-radius: 10px;
-  width: 95%;
+  width: 90%;
 }
 /*Task List*/
 
