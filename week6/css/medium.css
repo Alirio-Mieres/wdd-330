@@ -22,4 +22,7 @@
    #container{
      width: 450px;
    }
+   label{
+    font-size: 1.3rem;
+  }
 }

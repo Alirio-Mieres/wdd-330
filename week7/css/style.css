@@ -1,0 +1,19 @@
+body{
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+main{
+  width: 60%;
+  height: auto;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+section{
+  text-align: left;
+}

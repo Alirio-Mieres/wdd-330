@@ -154,3 +154,7 @@ input:checked[type="checkbox"]::before{
 .delete:hover{
   background-color: none;
 }
+
+label{
+  font-size: 1rem;
+}
