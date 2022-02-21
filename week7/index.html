@@ -17,10 +17,36 @@
 
     <section>
       <h3>Further Functions</h3>
-      <p>Functions in JavaScript have properties and methods. Functions have a "length" property that returns the number
-        of parameters the function has. The call() and apply() methods are used to call a function with the value of
-        "this" bound to an object that is supplied as an argument.</p>
-      <p></p>
+      <p>Functions in Javascript are first-class objects, which means they can have their properties and methods.
+        Functions have a length property that returns the number of parameters the function has. They also have a call()
+        and apply() methods that are used to set the value of "this" for an object that will be supplied as an argument
+        to that function.The first argument for these functions is always "this", if the function needs more arguments
+        it should be placed after "this". The apply() method is similar to the call() method, the difference is that the
+        arguments are provided as an array. We can also create custom properties, like adding the function description.
+        We can make a property (cache) that stores the results of the function, so if the same argument is entered,
+        instead of calculating it again, the function will return the value stored in that property (cache).</p>
+
+      <p>IIFE are Immediately invoked function expressions are functions that are enclosed in parentheses by placing
+        double parentheses at the end of the function definition. Variables that are declared inside these functions are
+        temporary and are removed after the function has been declared. It can be used as an initialization code that
+        will not be used later. Another interesting thing is that it can also be used in strict mode. Functions in
+        Javascript have various forms. There are redefined functions that change depending on certain conditions. The
+        recursive function will keep calling itself until a certain condition has been met. A callback is a function
+        that is passed as an argument to another function.</p>
+
+      <p>Callbacks are used in asynchronous programming as part of the event loop, a program can continue executing
+        while waiting for another task to complete. Promises represent the future result of an asynchronous operation.
+        Promises can be used instead of callbacks, as they provide a nicer mechanism for handling errors. There is also
+        the chaining of multiple promises if each function that performs the asynchronous operation returns a promise,
+        we can chain the "then" methods to form a sequential code.</p>
+
+      <p>Functions that return other functions are known as higher-order functions. Another thing I learned was about
+        closures, a closure is a process of keeping a reference to a variable available outside the scope of the
+        function that originally defined it. A generator function is a special function used to produce iterators that
+        hold the state of a value.</p>
+      
+        <p>Functional programming focuses on dividing processes into a series of steps that are implemented as functions.
+        Pure functions do not depend on the state of the code from which they are called and have no side effects.</p>
 
     </section>
   </main>
