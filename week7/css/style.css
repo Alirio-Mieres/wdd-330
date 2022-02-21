@@ -17,3 +17,18 @@ main{
 section{
   text-align: left;
 }
+
+.button, #output{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+#number{
+  background-color: #be2a2a;
+  border: #dddddd;
+  padding: 1rem;
+  border-radius: 4px;
+  
+}

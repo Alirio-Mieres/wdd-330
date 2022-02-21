@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 7 notes</title>
   <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
 </head>
 
 <body>
@@ -44,10 +45,29 @@
         closures, a closure is a process of keeping a reference to a variable available outside the scope of the
         function that originally defined it. A generator function is a special function used to produce iterators that
         hold the state of a value.</p>
-      
-        <p>Functional programming focuses on dividing processes into a series of steps that are implemented as functions.
+
+      <p>Functional programming focuses on dividing processes into a series of steps that are implemented as functions.
         Pure functions do not depend on the state of the code from which they are called and have no side effects.</p>
 
+      <h3>Ajax</h3>
+      <p>Ajax () is a technique that allows web pages to communicate asynchronously in the background. Ajax allows
+        Javascript to request resources from the server on behalf of the client, which allows web pages to dynamically
+        update without reloading. The data can be sent in many ways, but it is usually in JSON format.</p>
+
+      <p>Ajax can be used to communicate with external APIs. Ajax requests can be made using the Fetch API. The response
+        interface allows us to create our objects and control the responses received from a request. The header
+        interface allows us to create HTTP headers that can be added to a request or response object. Requests to
+        retrieve data are made using the GET request or sending data using the POST request. Another thing I learned was
+        that the FormData interface makes it easy to submit data from forms.</p>
+
+      <p>This is an example of how Ajax works:</p>
+
+      <div class="button">
+        <button id='number'>Number Fact</button>
+      </div>
+      <div id='output'>
+        Ajax response will appear here
+      </div>
     </section>
   </main>
 </body>
