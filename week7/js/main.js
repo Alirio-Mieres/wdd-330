@@ -16,7 +16,6 @@ textButton.addEventListener('click', () => {
   .then( text => outputDiv.innerText = text )
   .catch( error => console.log('There was an error:', error))
 },false);
-
 /*const form = document.forms['todo'];
 form.addEventListener('submit', addTask, false);
 
