@@ -1,7 +1,7 @@
 const textButton = document.getElementById('number');
 const outputDiv = document.getElementById('output');
 
-const textURL = 'https://numbersapi.com/random';
+const textURL = 'http://numbersapi.com/random';
 
 textButton.addEventListener('click', () => {
     fetch(textURL)
