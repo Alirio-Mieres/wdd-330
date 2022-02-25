@@ -1,19 +1,31 @@
-const textButton = document.getElementById('number');
+const textButton = document.getElementById('quotes');
 const outputDiv = document.getElementById('output');
+const span = document.createElement('span');
 
-const textURL = 'http://numbersapi.com/random';
+const textURL = "https://type.fit/api/quotes";
+let counter = 0;
 
 textButton.addEventListener('click', () => {
+    
     fetch(textURL)
     .then( response => {
-        outputDiv.innerHTML = 'Waiting for response...';
+        outputDiv.innerHTML = '';
     if(response.ok) {
         return response;
     }
         throw Error(response.statusText);
     })
-    .then( response => response.text() )
-    .then( text => outputDiv.innerText = text )
+    .then( response => response.json() )
+    .then( text => {
+        const json = text;
+        counter++;
+        const data = json[counter].text;
+        span.innerHTML = data;
+        outputDiv.appendChild(span);
+    })
+    /*for(i=0, i<1, i++){
+        AbortController;
+    }*/
     .catch( error => console.log('There was an error:', error))
 },false);
 /*const form = document.forms['todo'];

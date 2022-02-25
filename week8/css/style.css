@@ -1,0 +1,130 @@
+body{
+  background-color: #dddddd;
+  display: flex;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+}
+main{
+  width: 60%;
+  height: auto;
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+  margin-top: 60px;
+  justify-content: center;
+}
+
+section{
+  text-align: left;
+}
+
+ul {
+  position: relative; top: 100px; left: 100px;
+  float: left; width: 400px;  
+}
+
+li {position: absolute;
+  top: 150px;
+  left: 150px;
+  height: 200px;
+  width: 100px;
+  border: 3px solid black;
+  border-radius: 50%;
+  list-style-type: none;
+  transform-origin: 10% 10%;
+}
+
+ul:first-of-type li {
+  transform-origin: center;
+}
+ul:last-of-type li {
+  transform-origin: top center;
+}
+li:nth-of-type(20) {
+  -webkit-transform: rotate(15deg);
+  opacity: 0.95;
+}
+li:nth-of-type(2) {
+  -webkit-transform: rotate(30deg);
+  opacity: 0.9;
+}
+li:nth-of-type(3) {
+  -webkit-transform: rotate(45deg);
+  opacity: 0.85;
+}
+
+li:nth-of-type(4) {
+  -webkit-transform: rotate(60deg);
+  opacity: 0.8;
+}
+
+li:nth-of-type(5) {
+  -webkit-transform: rotate(75deg);
+  opacity: 0.75;
+}
+
+li:nth-of-type(6) {
+  -webkit-transform: rotate(90deg);
+  opacity: 0.7;
+}
+
+li:nth-of-type(7) {
+  -webkit-transform: rotate(105deg);
+  opacity: 0.65;
+}
+
+li:nth-of-type(8) {
+  -webkit-transform: rotate(120deg);
+  opacity: 0.6;
+}
+li:nth-of-type(9) {
+  -webkit-transform: rotate(135deg);
+  opacity: 0.55;
+}
+li:nth-of-type(10) {
+  -webkit-transform: rotate(150deg);
+  opacity: 0.5;
+}
+li:nth-of-type(11) {
+  -webkit-transform: rotate(165deg);
+  opacity: 0.45;
+}
+li:nth-of-type(12) {
+  -webkit-transform: rotate(180deg);
+  opacity: 0.4;
+}
+li:nth-of-type(13) {
+  -webkit-transform: rotate(195deg);
+  opacity: 0.35;
+}
+li:nth-of-type(14) {
+  -webkit-transform: rotate(210deg);
+  opacity: 0.30;
+}
+li:nth-of-type(15) {
+  -webkit-transform: rotate(225deg);
+  opacity: 0.25;
+}
+
+li:nth-of-type(16) {
+  -webkit-transform: rotate(240deg);
+  opacity: 0.2;
+}
+
+li:nth-of-type(17) {
+  -webkit-transform: rotate(255deg);
+  opacity: 0.15;
+}
+
+li:nth-of-type(18) {
+  -webkit-transform: rotate(270deg);
+  opacity: 0.1;
+}
+
+li:nth-of-type(19) {
+  -webkit-transform: rotate(295deg);
+  opacity: 0.05;
+}
+li:first-of-type {
+  border-color: red;
+}
