@@ -37,6 +37,7 @@ const links = [
   label: "Week 8 notes",
   url: "week8/index.html"
 }
+
 ];
 
 
