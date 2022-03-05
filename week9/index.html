@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Week 9</title>
+  <script defer src="js/week8.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week 9 Notes</h2>
+    <section>
+      <h3>The Window Object</h3>
+      <p>This week I learned that every JavaScript environment has a global object, global variables are properties of
+        the global object, also some functions are methods of this object. In web browser environments the global object
+        is the window object, this object represents the browser window that contains the web page. The Browser Object
+        Model or BOM is a collection of properties and methods that contains information about the browser and the
+        computer screen. It is always important to remember that the BOM works only in the browser environment.</p>
+      <p>
+        There are three functions that produce dialogs in the browser: alert(), confirm() and prompt(). These functions
+        are not part of JavaScript but are supported by browsers, they work as methods of the window object. The alert()
+        function displays a message on the screen. The confirm() function displays a message on the screen that gives
+        the user the option to click on the “ok” or “cancel” button, it is used to confirm an action. The prompt()
+        function will do the same thing as confirm but with the difference that it allows the user to enter text. All
+        these functions will stop the execution of the program and it will not continue until we select an option, this
+        sometimes makes the user experience not good, so it is important to analyze well where they will be used.
+      </p>
+      <p>The window object has various properties and methods that provide information about the user, the browser they
+        are using, and even the protocol being used. The window object has the property “navigator” and refers to the
+        browser object, this object has a property called “userAgent”, which returns information about the browser and
+        the user. There is also the "location" property, which contains information about the URL of the page, through
+        its properties: href, host, protocol, hostname, port, pathname, search, hash, origin, etc. "history" property
+        that is used to access information about the pages visited during a user's session.
+      </p>
+      <p>
+        We can open, close, resize, and move windows. The window.screen object provides information about the user's
+        screen. I also learned about the document.write() method, which is an old method used to write text to the
+        document, it is bad practice to use it, it is best to avoid it. Cookies can be used to store small pieces of
+        information between requests using the document.cookie property. The window.setTime() method is used to call a
+        function after the set time. Also window.requestAnimationFrame() is used to make animations, the most
+        recommended is to use CSS because it is a more optimal way.
+      </p>
+
+      <h3>HTML5 APIs</h3>
+      <p>HTML5.1 is the latest version of the hypertext markup language which brings a lot of functionality, it includes
+        several APIs that can be accessed through JavaScript. The "data-" attribute helps embed custom data in a web
+        page that can then be used to improve the user experience with JavaScript.</p>
+      <p>The storage API allows user information to be saved in the browser through key-value pairs, it is somewhat
+        similar to cookies, but it has some benefits such as it is not necessary to save them through the server and it
+        allows a larger amount of storage.</p>
+      <p>I also learned about the geolocation API to obtain the geographical location of the user, this allows knowing
+        their exact location, if they are traveling, you can also know the speed. To have this functionality the user
+        must grant permission for it to work.</p>
+      <p>
+        Websockets is a new protocol for communication over the internet and allows two-way communication in real time.
+        The Web Worker API can be used to perform background tasks which solves the problem of JavaScript being a single
+        threaded language. The Notification API allows us to display notifications on the user's system.
+      </p>
+      <P>
+        The “audio” and “video” elements can be used to embed audio tracks and video clips on a web page. The "canvas"
+        element is used to dynamically draw geometric shapes, text or images on a web page in real time using
+        JavaScript.
+      </P>
+      <p>A shim and polyfill are code snippets used to add functionality that is not supported by older browsers.</p>
+    </section>
+  </main>
+</body>
+
+</html>
