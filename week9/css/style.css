@@ -30,5 +30,12 @@ section{
   border: #dddddd;
   padding: 1rem;
   border-radius: 4px;
-  
+} 
+
+.palette{
+  max-width: 100%;
+}
+
+img{
+  max-width: 100%;
 }
