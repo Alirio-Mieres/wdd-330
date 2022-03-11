@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Week 9</title>
+  <script defer src="js/week8.js"></script>
+</head>
+
+<body>
+  <main>
+    <h1>WDD 330 Portfolio</h1>
+    <h2>Week 10 Notes</h2>
+    <section>
+      <h3>Client-side form validation</h3>
+      <p>This week I learned more about client-side validations and the benefits it brings. The client-side validations
+        help users to have a better experience, if these validations are not used, the errors will be sent to the
+        server, it will do the validation and it will take time to load, having client-side validations makes this
+        process faster and more dynamic. Despite these benefits, it's important to always perform server-side validation
+        because malicious users can manipulate JavaScript code. There are three key points by which we do these
+        validations, we obtain the data of the users correctly and in a good format, we protect the data of our users
+        and we protect our application.</p>
+      <p>There are two ways to do client-side validation, through the HTML5 API and through JavaScript (which allows us
+        to do it in a custom way). HTML5 form control validation allows you to validate most data without JavaScript, it
+        works like attributes on form elements. among them are "required", "min and max", "minlength and maxlength",
+        "type" and "pattern". "pattern" uses regular expressions to specify the desired pattern, and "type" specifies
+        the types of data to be entered (numbers, email, etc.).</p>
+      <p>The main attribute is the "required", if the input has no value, it will have the status of ":invalid", but if
+        the element has a valid value, it will have the value: "valid", this allows you to give custom layouts to the
+        forms. It's also important that we let users know what inputs are required and use this attribute on the most
+        important inputs. The minlength and maxlength attribute allow you to specify the number of characters the user
+        can enter. A better user experience than just using maxlength is to also provide
+        character count feedback in an accessible manner and let them edit their content down to size. The constraint
+        validation API is used to make more personalized validations, through JavaScript we can add personalized
+        messages for a specific situation.
+      </p>
+      <h3>Using the Fetch API</h3>
+      <p>
+        The fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as
+        requests and responses. It has a fetch method that allows us to get the data in an easier way and get the
+        resources asynchronously. The "Headers" interface allows you to create your own header object via a header()
+        constructor, represents response/request headers, allowing you to query them and take different actions
+        depending on the results. "Request" represents a resource request. "Response" Represents the response to a
+        request.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
