@@ -1,0 +1,19 @@
+@media only screen and (min-width: 30rem) {
+  html{
+    border: 30px solid rgb(236, 46, 46);
+    padding: 2em;
+  }
+  main{
+    padding: 2em;
+  }
+  nav {
+    margin: 0 35%;
+}
+
+.input-text{
+  /*position: absolute;*/
+  padding: 0.5em 5em;
+  border-radius: 3.5px;
+  border-color: rgb(57, 147, 226);
+}
+}
