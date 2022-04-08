@@ -60,6 +60,7 @@ export  function searchPokemon(value) {
     const checkTask = document.createElement('input');
     checkTask.setAttribute('type', 'button');
     checkTask.value = "Save";
+    checkTask.classList.add("savePokemon")
     
     // const checkDelete = document.createElement("input");
     // checkDelete.setAttribute('type', 'button');
@@ -145,7 +146,6 @@ export  function searchPokemon(value) {
   }
 
  }
-
 
 
  function favoritePokemons(info){

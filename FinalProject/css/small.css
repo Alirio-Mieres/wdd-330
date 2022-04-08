@@ -112,3 +112,17 @@ figure{
   align-items: center;
 }
 
+.savePokemon{
+  border: none;
+  padding: 0.8rem;
+  border-radius: 6px;
+  margin: 0.9em;
+}
+
+.savePokemon:hover{
+background-color: rgb(97, 97, 194);
+}
+
+.savePokemon:active{
+background-color: rgb(67, 67, 204);
+}

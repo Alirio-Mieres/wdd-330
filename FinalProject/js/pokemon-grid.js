@@ -9,7 +9,7 @@ export async function loadPokemons(url) {
   
 
   try{
-    // main.innerHTML = `<img class="loader" src="../asset/loader.svg" alt="loading">`;
+    
 
 
     let res = await fetch(url);
@@ -48,10 +48,8 @@ export async function loadPokemons(url) {
           </figure>
         `;
       }
-    }//Acaba ciclo for
-    // const favoriteContainer = document.getElementById("favoriteContainer");
-    // favoriteContainer.classList.add("center");
-
+    }
+    
     main.innerHTML = template;
     home = `<a href ="https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20">🏠`
     prevLink = json.previous ? `<a href="${json.previous}"> ⏮️`: "";
