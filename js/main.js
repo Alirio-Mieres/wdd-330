@@ -46,6 +46,10 @@ const links = [
   url: "week10/index.html",
 },
 {
+  label: "SoloLearn Study",
+  url:"https://www.sololearn.com/certificates/course/en/24475083/1024/landscape/png"
+},
+{
   label: "Final Project",
   url: "FinalProject/index.html"
 }
